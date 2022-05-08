@@ -1,0 +1,42 @@
+package com.zq.service;
+ 
+import java.util.List;
+import com.github.pagehelper.PageInfo;
+import com.zq.model.${modelClass};
+ 
+public class ${modelClass}ManagerImpl implements ${modelClass}Manager {
+
+	@Autowired
+	${modelClass}Dao ${modelClass.substring(0,1).toLowerCase()}${modelClass.substring(1)}Dao;
+	/**
+	 * 带有分页的列表查询
+	 * @param pageNum
+	 * @param pageSize
+	 * @param ${modelName}
+	 * @return
+	 */
+	public PageInfo<${modelClass}> list(Integer pageNum,Integer pageSize,${modelClass} ${modelName.substring(0,1).toLowerCase()}${modelName.substring(1)}){
+
+	}
+	
+	/**
+	 * 没有分页的列表查询
+	 * @param pageNum
+	 * @param pageSize
+	 * @param ${modelName}
+	 * @return
+	 */
+	public List<${modelClass}> list(${modelClass} ${modelName}){
+	return ${modelClass.substring(0,1).toLowerCase()}${modelClass.substring(1)}Dao.get${modelClass}Info(${modelName});
+	}
+
+	}
+	/**
+	* 关键词查询
+	* @param param
+	* @return
+	*/
+	public ${modelClass} findByParam(String param);{
+
+	}
+}

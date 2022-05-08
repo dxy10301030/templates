@@ -1,0 +1,21 @@
+
+
+@Controller
+public class TestController {
+
+    @LoginCheck
+    @ViewExceptionCatch
+    @RequestMapping("gotoXXXXX")
+    public String gotoXXXXX(Model model,String id){
+    model.addAttribute("id",id);
+    return "project/imaea/XXXXX";
+    }
+
+    @LoginCheck
+    @ResponseBody
+    @RequestMapping(value="/XXXXX", method=RequestMethod.POST)
+    public IMaeaXXXDTO getInfoById(String id){
+    return maeaXXXManager.getInfoById(id);
+    }
+
+}

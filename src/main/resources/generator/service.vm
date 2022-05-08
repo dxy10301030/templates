@@ -1,0 +1,32 @@
+package com.zq.service;
+ 
+import java.util.List;
+import com.github.pagehelper.PageInfo;
+import com.zq.model.${modelClass};
+ 
+public interface ${modelClass}Manager {
+	/**
+	 * 带有分页的列表查询
+	 * @param pageNum
+	 * @param pageSize
+	 * @param ${modelName}
+	 * @return
+	 */
+	public PageInfo<${modelClass}> ${modelClass}list(Integer pageNum,Integer pageSize,${modelClass} ${modelName});
+	
+	/**
+	 * 没有分页的列表查询
+	 * @param pageNum
+	 * @param pageSize
+	 * @param ${modelName}
+	 * @return
+	 */
+	public List<${modelClass}> ${modelClass}list(${modelClass} ${modelName});
+
+	/**
+	* 关键词查询
+	* @param Param
+	* @return
+	*/
+	public ${modelClass} findByParam(String Param);
+}

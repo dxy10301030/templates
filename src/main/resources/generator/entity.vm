@@ -1,0 +1,27 @@
+
+public class ${modelClass} {
+#foreach ($entity in $entityList)
+
+	//$entity.column_comment
+	private #if($entity.date_type == 'varchar' || $entity.date_type == 'char')String#end#if($entity.date_type == 'NUMBER')Integer#end $entity.column_name;
+#end
+#foreach ($entity in $entityList)
+
+	public #if($entity.date_type == 'varchar' || $entity.date_type == 'char' || $entity.date_type == 'VARCHAR2')String#end#if($entity.date_type == 'NUMBER')Integer#end get${entity.column_name.substring(0,1).toUpperCase()}${entity.column_name.substring(1)}() {
+	return $entity.column_name;
+	}
+
+	public void set${entity.column_name.substring(0,1).toUpperCase()}${entity.column_name.substring(1)}(#if($entity.date_type == 'varchar' || $entity.date_type == 'char')String#end#if($entity.date_type == 'NUMBER')Integer#end $entity.column_name) {
+	this.$entity.column_name = $entity.column_name;
+	}
+#end
+
+	@Override
+	public String toString() {
+	return "${modelClass}{" +
+	#foreach ($entity in $entityList)
+	"#if($velocityCount != 1),#end$entity.column_name='" + $entity.column_name + '\'' +
+	#end
+	'}';
+	}
+}
