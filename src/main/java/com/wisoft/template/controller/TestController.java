@@ -20,4 +20,8 @@ public class TestController {
     public String gotoInfo(){
         return "32564";
     }
+     public String gotoInfo11(){
+        return "32564";
+    }
+    
 }
