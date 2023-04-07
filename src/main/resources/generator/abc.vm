@@ -62,7 +62,7 @@ public void set${subClassName}List(List<${subClassName}> ${subclassName}List)
 {
 this.${subclassName}List = ${subclassName}List;
 }
-
+999999999999999999999999999999999
 #end
 @Override
 public String toString() {
