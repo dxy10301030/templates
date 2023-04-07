@@ -18,6 +18,6 @@ public class TestController {
 
     @RequestMapping("/page")
     public String gotoInfo(){
-        return "1233";
+        return "123333333";
     }
 }
