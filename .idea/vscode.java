@@ -9,7 +9,3 @@ a1d2a3d1a
 1d5q1a3qe
 qd1w3
 qWDQ
-AASDACAS
-FACVA
-VAVCA
-SCA
